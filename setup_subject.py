@@ -168,7 +168,7 @@ def load_dcmhdrs(subdir_names):
 def save_dcmhdrs(dcmhdrs,subdir_names):
     hdrfile=os.path.join(subdir_names['logs'],'dicom_headers.pkl')
     f=open(hdrfile,'wb')
-    pickle.dump(dcmhdrs,f)
+    pickle.dump(dcmhdrs,f, -1)
     f.close()
 
 
