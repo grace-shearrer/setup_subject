@@ -305,7 +305,7 @@ def download_from_osirix(args, subdir):
 	dl=downloader.Downloader(args['osirix_username'],args['osirix_password'])
 	datazip = dl.downloadDicomsByPatientID(args['subcode'])
 	ziphandle = zipfile.ZipFile(datazip)
-	os.path.makedirs(os.path.join(subdir, 'raw', args['subcode']))
+	os.makedirs(os.path.join(subdir, 'raw', args['subcode']))
 	ziphandle.extractall(os.path.join(subdir,'raw',args['subcode']))
 
 
