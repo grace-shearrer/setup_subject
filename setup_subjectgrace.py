@@ -2,7 +2,7 @@
 """
 process data from Skyra
 Russ Poldrack, 8/31/2012
-grace chad edits
+grace chad edits electric boogaloo
 """
 print "starting from grace's working directory"
 import subprocess as sub
