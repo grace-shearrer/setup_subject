@@ -305,7 +305,7 @@ def download_from_osirix(args, subdir):
 	dl=downloader.Downloader(args['osirix_username'],args['osirix_password'])
 	datazip = dl.downloadDicomsByPatientID(args['subcode'])
 	ziphandle = zipfile.ZipFile(datazip)
-	os.path.mkdirs(os.path.join(subdir, 'raw', args['subcode']))
+	os.path.makedirs(os.path.join(subdir, 'raw', args['subcode']))
 	ziphandle.extractall(os.path.join(subdir,'raw',args['subcode']))
 
 
@@ -542,12 +542,7 @@ if __name__ == "__main__":
 	
 	# this is for debugging - detect whether I am
 	# on my macbook or on lonestar
-	if socket.gethostname().find('tacc')>0:
-	    USE_MAC=0
-	else:
-	    USE_MAC=1
-	
-	if USE_MAC:
+	if False:
 	    args['basedir']='/Users/poldrack/data2/setup_subject_ut/data'
 	    args['mricrondir']='/Applications/fmri_progs/mricronmac/'
 	    args['filename']='/Users/poldrack/data2/setup_subject_ut/Skyra_testing/rpo-BOOST-pilot1_8_30_2012_17_32_1.zip'
