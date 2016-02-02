@@ -1,0 +1,1 @@
+python /work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py --keepdata --studyname sugar_brain -s sb_00137 --fs-subdir /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer --fsrecon -o 
