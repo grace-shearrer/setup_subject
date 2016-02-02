@@ -16,6 +16,8 @@ import socket
 import xnat_tools
 from osirixdownloader import downloader
 import zipfile
+import random
+import string
 
 def run_logged_cmd(cmd,cmdfile):
         outfile=open(cmdfile,'a')
@@ -81,7 +83,7 @@ def parse_command_line():
 
     parser.add_argument('--xnat_server', dest='xnat_server',
         help='URL for xnat server',default="https://xnat.irc.utexas.edu/xnat-irc")
-    parser.add_argument('--osirix_usernam', dest='osirix_username',
+    parser.add_argument('--osirix_username', dest='osirix_username',
         help='user name for osirix server',default='')
     parser.add_argument('--osirix_password', dest='osirix_password',
         help='password for osirix server',default='')
@@ -301,12 +303,47 @@ def topup(args,subdir_names):
 		    
 	
 
+def get_xnat_name(header):
+	name = str()
+	name += str(header.PatientName) if str(header.PatientName) != '' else 'Subject'
+	name += '.'
+	name += str(header.RequestedProcedureDescription) if str(header.RequestedProcedureDescription) != '' else 'Procedure'
+	name += '.'
+	name += str(header.SeriesNumber) if str(header.SeriesNumber) != '' else 'num'
+	name += '.'
+	name += str(header.InstanceNumber) if str(header.InstanceNumber) != '' else 'inst'
+	name += '.'
+	name += str(header.StudyDate) if str(header.StudyDate) != '' else 'date'
+	name += '.'
+	name += str(header.StudyTime).replace('.','') if str(header.StudyTime) != '' else 'time'
+	name += '.'
+	name += ''.join(random.choice(string.ascii_lowercase + string.ascii_uppercase + string.digits) for _ in range(7))
+	name += '.dcm'
+	return name
+
 def download_from_osirix(args, subdir):
 	dl=downloader.Downloader(args['osirix_username'],args['osirix_password'])
 	datazip = dl.downloadDicomsByPatientID(args['subcode'])
 	ziphandle = zipfile.ZipFile(datazip)
-	os.makedirs(os.path.join(subdir, 'raw', args['subcode']))
+	if not os.path.exists(os.path.join(subdir, 'raw', args['subcode'])):
+		os.makedirs(os.path.join(subdir, 'raw', args['subcode']))
 	ziphandle.extractall(os.path.join(subdir,'raw',args['subcode']))
+	os.unlink(datazip)
+	for item in os.listdir(os.path.join(subdir, 'raw', args['subcode'])):
+		path, ext = os.path.splitext(item)
+		if ext != '.dcm':
+			print 'continuing'
+			continue
+		item = os.path.join(subdir,'raw',args['subcode'], item)
+		headers = dicom.read_file(item)
+		newitemname = get_xnat_name(headers)
+		destination = os.path.join(subdir, 'raw',args['subcode'],str(headers.SeriesNumber))
+		destination = str(destination).replace(' ', '_')
+		print 'new destination is {}'.format(os.path.join(destination, newitemname))
+		if not os.path.exists(destination):
+			os.mkdir(destination)
+		os.rename(item, os.path.join(destination, newitemname))
+
 
 
 def download_from_xnat(args,subdir):
