@@ -307,7 +307,10 @@ def get_xnat_name(header):
 	name = str()
 	name += str(header.PatientName) if str(header.PatientName) != '' else 'Subject'
 	name += '.'
-	name += str(header.RequestedProcedureDescription) if str(header.RequestedProcedureDescription) != '' else 'Procedure'
+	try:
+		name += str(header.RequestedProcedureDescription) if str(header.RequestedProcedureDescription) != '' else 'Procedure'
+	except:
+		name += 'Procedure'
 	name += '.'
 	name += str(header.SeriesNumber) if str(header.SeriesNumber) != '' else 'num'
 	name += '.'
