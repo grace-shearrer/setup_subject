@@ -14,7 +14,8 @@ umask 2
 
 module load launcher
 module load fsl
-
+module load freesurfer
+module load matlab
 ## DO NOT EDIT
 export LAUNCHER_PLUGIN_DIR=$LAUNCHER_DIR/plugins
 export LAUNCHER_RMI=SLURM
