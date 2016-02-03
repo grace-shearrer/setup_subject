@@ -619,9 +619,11 @@ if __name__ == "__main__":
 	    bet_inplane(args,subdir_names)
 	
 	# run freesurfer autorecon1
+        # added print here GES  
 	if args['fsrecon']:
 	    fs_setup(args,subdir_names)
-	    run_autorecon1(args,subdir_names)
+	    print fs_setup(args,subdir_names)
+            run_autorecon1(args,subdir_names)
 	    copy_stripped_T1(args,subdir_names)
 	
 	if args['dtiqa']:
