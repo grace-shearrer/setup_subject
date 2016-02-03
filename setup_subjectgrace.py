@@ -471,6 +471,8 @@ def convert_dicom_to_nifti(args, subdir):
 	highresctr=1
 	inplanectr=1
 	for a in anatfiles:
+		if 'highres' in a:
+			continue
 		print a
 		runnum=a.rsplit('a')[-2].rsplit('s')[-1].lstrip('0')
 		mprage=0
