@@ -226,9 +226,9 @@ def copy_stripped_T1(args,subdir_names):
         print 'brainmask %s does not exist - skipping copy'%brainmask
         return
     else:
-        cmd='mri_convert --out_orientation LAS %s --reslice_like %s/highres001.nii.gz  %s/highres001_brain.nii'%(brainmask,
-                                                                                                                 subdir_names['anatomy'],subdir_names['anatomy'])
+        cmd='mri_convert --out_orientation LAS %s --reslice_like %s/highres001.nii.gz  %s/highres001_brain.nii'%(brainmask, subdir_names['anatomy'],subdir_names['anatomy'])
         print cmd
+#changed here
         if not args['testmode']:
             run_logged_cmd(cmd,outfile['main'])
         cmd='gzip  %s/highres001_brain.nii'%subdir_names['anatomy']

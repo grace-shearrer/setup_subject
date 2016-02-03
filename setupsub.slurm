@@ -3,7 +3,7 @@
 #SBATCH -J launch       # Job Name
 #SBATCH -o setup_sub_fs_137 # Name of the output file (eg. myMPI.oJobID)
 #SBATCH -p normal
-#SBATCH -t 02:00:00
+#SBATCH -t 10:00:00
 #SBATCH -n 2
 #SBATCH --get-user-env
 #SBATCH -A Analysis_Lonestar
