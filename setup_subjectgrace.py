@@ -226,9 +226,9 @@ def copy_stripped_T1(args,subdir_names):
         print 'brainmask %s does not exist - skipping copy'%brainmask
         return
     else:
-        cmd='mri_convert --out_orientation LAS %s --reslice_like %s/highres001.nii.gz  %s/highres001_brain.nii'%(brainmask,
-                                                                                                                 subdir_names['anatomy'],subdir_names['anatomy'])
+        cmd='mri_convert --out_orientation LAS %s --reslice_like %s/highres001.nii.gz  %s/highres001_brain.nii'%(brainmask, subdir_names['anatomy'],subdir_names['anatomy'])
         print cmd
+#changed here
         if not args['testmode']:
             run_logged_cmd(cmd,outfile['main'])
         cmd='gzip  %s/highres001_brain.nii'%subdir_names['anatomy']
@@ -470,6 +470,8 @@ def convert_dicom_to_nifti(args, subdir):
 	highresctr=1
 	inplanectr=1
 	for a in anatfiles:
+		if 'highres' in a:
+			continue
 		print a
 		runnum=a.rsplit('a')[-2].rsplit('s')[-1].lstrip('0')
 		mprage=0
@@ -618,9 +620,11 @@ if __name__ == "__main__":
 	    bet_inplane(args,subdir_names)
 	
 	# run freesurfer autorecon1
+        # added print here GES  
 	if args['fsrecon']:
 	    fs_setup(args,subdir_names)
-	    run_autorecon1(args,subdir_names)
+	    print fs_setup(args,subdir_names)
+            run_autorecon1(args,subdir_names)
 	    copy_stripped_T1(args,subdir_names)
 	
 	if args['dtiqa']:
