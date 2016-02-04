@@ -342,7 +342,6 @@ def download_from_osirix(args, subdir):
 		newitemname = get_xnat_name(headers)
 		destination = os.path.join(subdir, 'raw',args['subcode'],str(headers.SeriesNumber))
 		destination = str(destination).replace(' ', '_')
-		print 'new destination is {}'.format(os.path.join(destination, newitemname))
 		if not os.path.exists(destination):
 			os.mkdir(destination)
 		os.rename(item, os.path.join(destination, newitemname))
