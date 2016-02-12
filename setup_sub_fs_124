@@ -1,0 +1,41 @@
+Freesurfer loaded but not setup. Now run: source $FREESURFER_HOME/SetUpFreeSurfer.sh
+
+Be sure that your $SUBJECTS_DIR variable is set to a directory you have write 
+access to, or provide a subjects dir argument to commands that require it. 
+
+
+Launcher: Setup complete.
+
+------------- SUMMARY ---------------
+   Number of hosts:    1
+   Working directory:  .
+   Processes per host: 2
+   Total processes:    2
+   Total jobs:         1
+   Scheduling method:  dynamic
+
+-------------------------------------
+Launcher: Starting parallel tasks...
+Warning: Permanently added '[nid00690]:6999,[10.128.2.183]:6999' (RSA) to the list of known hosts.
+grep: invalid max count
+Launcher: Task 1 running job 1 on nid00690 (python /work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py --keepdata --studyname sugar_brain -s sb_00124 --fs-subdir /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer --fsrecon -o)
+Launcher: Task 0 running job Done on nid00690 ()
+Launcher: Job Done completed in 0 seconds.
+Launcher: Task 0 done. Exiting.
+starting from grace's working directory
+subdir /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00124 already exists
+overwriting...
+bolddirs:
+['wtp_run02_14', 'wtp_run01_13', 'wtp_run01_12', 'taste_run02_9', 'taste_run02_10', 'wtp_run02_15', 'taste_run01_8', 'taste_run01_7']
+recon-all -i /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00124/anatomy/highres001.nii.gz -subjid sugar_brain_sb_00124 -sd /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer
+subject dir %s already exists - overwriting
+None
+recon-all -autorecon1 -subjid sugar_brain_sb_00124 -sd /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer
+mri_convert --out_orientation LAS /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer/sugar_brain_sb_00124/mri/brainmask.mgz --reslice_like /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00124/anatomy/highres001.nii.gz  /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00124/anatomy/highres001_brain.nii
+gzip  /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00124/anatomy/highres001_brain.nii
+logs: ERROR: gzip: No such file or directory
+
+fslmaths /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00124/anatomy/highres001_brain.nii.gz -thr 1 -bin /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00124/anatomy/highres001_brain_mask.nii.gz
+Launcher: Job 1 completed in 1566 seconds.
+Launcher: Task 1 done. Exiting.
+Launcher: Done. Job exited without errors

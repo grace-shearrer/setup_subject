@@ -1,0 +1,49 @@
+
+The following have been reloaded with a version change:
+  1) fsl/5.0.2 => fsl/5.0.9
+
+Freesurfer loaded but not setup. Now run: source $FREESURFER_HOME/SetUpFreeSurfer.sh
+
+Be sure that your $SUBJECTS_DIR variable is set to a directory you have write 
+access to, or provide a subjects dir argument to commands that require it. 
+
+
+Launcher: Setup complete.
+
+------------- SUMMARY ---------------
+   Number of hosts:    1
+   Working directory:  .
+   Processes per host: 2
+   Total processes:    2
+   Total jobs:         1
+   Scheduling method:  dynamic
+
+-------------------------------------
+Launcher: Starting parallel tasks...
+Warning: Permanently added '[nid00044]:6999,[10.128.0.45]:6999' (RSA) to the list of known hosts.
+grep: invalid max count
+Launcher: Task 0 running job Done on nid00044 ()
+Launcher: Task 1 running job 1 on nid00044 (python /work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py --getdata --keepdata --osirix_username davis --osirix_password eatthisnotthat --studyname sugar_brain -s sb_0069 --dcm2nii --motcorr --betfunc --fm --fs-subdir /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer --fsrecon -o)
+Launcher: Job Done completed in 0 seconds.
+Launcher: Task 0 done. Exiting.
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): sweetn.irc.utexas.edu
+starting from grace's working directory
+subdir /corral-repl/utexas/poldracklab/data/sugar_brain/sb_0069 already exists
+overwriting...
+Traceback (most recent call last):
+  File "/work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py", line 600, in <module>
+    download_from_osirix(args,subdir)
+  File "/work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py", line 333, in download_from_osirix
+    ziphandle.extractall(os.path.join(subdir,'raw',args['subcode']))
+  File "/opt/apps/intel16/python/2.7.10/lib/python2.7/zipfile.py", line 1040, in extractall
+    self.extract(zipinfo, path, pwd)
+  File "/opt/apps/intel16/python/2.7.10/lib/python2.7/zipfile.py", line 1028, in extract
+    return self._extract_member(member, path, pwd)
+  File "/opt/apps/intel16/python/2.7.10/lib/python2.7/zipfile.py", line 1082, in _extract_member
+    with self.open(member, pwd=pwd) as source, \
+  File "/opt/apps/intel16/python/2.7.10/lib/python2.7/zipfile.py", line 980, in open
+    zinfo.orig_filename, fname)
+zipfile.BadZipfile: File name in directory "1810230.dcm" and header "1810090.dcm" differ.
+Launcher: Job 1 completed in 6722 seconds.
+Launcher: Task 1 done. Exiting.
+Launcher: Done. Job exited without errors

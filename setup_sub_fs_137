@@ -1,0 +1,50 @@
+Freesurfer loaded but not setup. Now run: source $FREESURFER_HOME/SetUpFreeSurfer.sh
+
+Be sure that your $SUBJECTS_DIR variable is set to a directory you have write 
+access to, or provide a subjects dir argument to commands that require it. 
+
+
+Launcher: Setup complete.
+
+------------- SUMMARY ---------------
+   Number of hosts:    1
+   Working directory:  .
+   Processes per host: 2
+   Total processes:    2
+   Total jobs:         1
+   Scheduling method:  dynamic
+
+-------------------------------------
+Launcher: Starting parallel tasks...
+Warning: Permanently added '[nid00578]:6999,[10.128.2.71]:6999' (RSA) to the list of known hosts.
+grep: invalid max count
+Launcher: Task 1 running job Done on nid00578 ()
+Launcher: Task 0 running job 1 on nid00578 (python /work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py --keepdata --studyname sugar_brain -s sb_00137 --fs-subdir /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer --fsrecon -o)
+Launcher: Job Done completed in 0 seconds.
+Launcher: Task 1 done. Exiting.
+starting from grace's working directory
+subdir /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137 already exists
+overwriting...
+bolddirs:
+['taste_run02_14', 'taste_run01_11', 'taste_run01_12', 'taste_run02_13']
+subject dir %s already exists - overwriting
+subject dir %s already exists - overwriting
+None
+recon-all -autorecon1 -subjid sugar_brain_sb_00137 -sd /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer
+mri_convert --out_orientation LAS /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer/sugar_brain_sb_00137/mri/brainmask.mgz --reslice_like /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137/anatomy/highres001.nii.gz  /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137/anatomy/highres001_brain.nii
+gzip  /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137/anatomy/highres001_brain.nii
+logs: ERROR: gzip: No such file or directory
+gzip: /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137/anatomy/highres001_brain.nii.gz already exists;	not overwritten
+
+fslmaths /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137/anatomy/highres001_brain.nii.gz -thr 1 -bin /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137/anatomy/highres001_brain_mask.nii.gz
+logs: ERROR: 
+
+
+WARNING!!!! Multiple image files detected:
+/corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137/anatomy/highres001_brain.nii /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00137/anatomy/highres001_brain.nii.gz 
+
+STOPPING PROGRAM
+
+Launcher: Job 1 completed in 1411 seconds.
+Launcher: Task 0 done. Exiting.
+Launcher: Done. Job exited without errors

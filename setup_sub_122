@@ -1,0 +1,257 @@
+Freesurfer loaded but not setup. Now run: source $FREESURFER_HOME/SetUpFreeSurfer.sh
+
+Be sure that your $SUBJECTS_DIR variable is set to a directory you have write 
+access to, or provide a subjects dir argument to commands that require it. 
+
+
+Launcher: Setup complete.
+
+------------- SUMMARY ---------------
+   Number of hosts:    1
+   Working directory:  .
+   Processes per host: 2
+   Total processes:    2
+   Total jobs:         1
+   Scheduling method:  dynamic
+
+-------------------------------------
+Launcher: Starting parallel tasks...
+Warning: Permanently added '[nid00147]:6999,[10.128.0.148]:6999' (RSA) to the list of known hosts.
+grep: invalid max count
+Launcher: Task 1 running job Done on nid00147 ()
+Launcher: Task 0 running job 1 on nid00147 (python /work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py --getdata --keepdata --osirix_username davis --osirix_password eatthisnotthat --studyname sugar_brain -s sb_00122 --dcm2nii --motcorr --betfunc --fm --fs-subdir /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer --fsrecon -o)
+Launcher: Job Done completed in 0 seconds.
+Launcher: Task 1 done. Exiting.
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): sweetn.irc.utexas.edu
+nii.gz
+T1wMPR1PMCs011a1001.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/T1wMPR1PMCs011a1001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/other
+oT1wMPR1PMCs011a1001.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/oT1wMPR1PMCs011a1001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001.nii.gz
+highresctr is at  2
+coT1wMPR1PMCs011a1001.nii.gz
+bolddirs:
+['wtp_run02_14', 'wtp_run02_15', 'taste_run01_8', 'taste_run02_10', 'wtp_run01_13', 'taste_run02_9', 'wtp_run01_12', 'taste_run01_7']
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_14/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_15/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_8/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_10/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_13/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_9/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_12/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_7/bold.nii.gz -plots -sinc_final
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_14/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_14/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_15/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_15/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_8/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_8/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_10/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_10/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_13/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_13/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_9/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_9/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_12/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_12/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_7/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_7/bold_mcf_brain.nii.gz -F
+recon-all -i /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001.nii.gz -subjid sugar_brain_sb_00122 -sd /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer
+subject dir %s already exists - overwriting
+None
+recon-all -autorecon1 -subjid sugar_brain_sb_00122 -sd /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer
+mri_convert --out_orientation LAS /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer/sugar_brain_sb_00122/mri/brainmask.mgz --reslice_like /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001.nii.gz  /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii
+gzip  /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii
+logs: ERROR: gzip: No such file or directory
+
+fslmaths /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii.gz -thr 1 -bin /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain_mask.nii.gz
+field map does not exist, skippping process_fieldmap
+Launcher: Job 1 completed in 6452 seconds.
+Launcher: Task 1 done. Exiting.
+Launcher: Done. Job exited without errors
+starting from grace's working directory
+subdir /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122 already exists
+overwriting...
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+continuing
+detected localizer: (3) AAHead_Scout AAHead_Scout_MPR_cor
+detected reference: (7) taste_run01 taste_run01_SBRef
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/7
+detected anatomy: (11) T1w_MPR1_PMC T1w_MPR1_PMC
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/11
+detected fieldmap: (6) fieldmap fieldmap
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/fieldmap /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/6
+detected fieldmap: (5) fieldmap fieldmap
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/fieldmap /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/5
+detected localizer: (4) AAHead_Scout AAHead_Scout_MPR_tra
+detected localizer: (1) AAHead_Scout AAHead_Scout
+detected localizer: (2) AAHead_Scout AAHead_Scout_MPR_sag
+detected reference: (14) wtp_run02 wtp_run02_SBRef
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/14
+detected BOLD: (15) wtp_run02 wtp_run02
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/15
+detected BOLD: (8) taste_run01 taste_run01
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/8
+detected BOLD: (10) taste_run02 taste_run02
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/10
+detected BOLD: (13) wtp_run01 wtp_run01
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/13
+detected reference: (9) taste_run02 taste_run02_SBRef
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/9
+detected reference: (12) wtp_run01 wtp_run01_SBRef
+dcm2nii -4 y -d n -i n -o /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/raw/sb_00122/12
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/tasterun01s007a001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_7/bold.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtprun02s014a001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_14/bold.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtprun02s015a001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_15/bold.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/tasterun01s008a001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_8/bold.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/tasterun02s010a001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_10/bold.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtprun01s013a001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_13/bold.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/tasterun02s009a001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_9/bold.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtprun01s012a001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_12/bold.nii.gz
+coT1wMPR1PMCs011a1001.nii.gz
+T1wMPR1PMCs011a1001.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/T1wMPR1PMCs011a1001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/other
+oT1wMPR1PMCs011a1001.nii.gz
+mv /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/oT1wMPR1PMCs011a1001.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001.nii.gz
+highresctr is at  2
+bolddirs:
+['wtp_run02_14', 'wtp_run02_15', 'taste_run01_8', 'taste_run02_10', 'wtp_run01_13', 'taste_run02_9', 'wtp_run01_12', 'taste_run01_7']
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_14/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_15/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_8/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_10/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_13/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_9/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_12/bold.nii.gz -plots -sinc_final
+motcorr
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])
+mcflirt -in /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_7/bold.nii.gz -plots -sinc_final
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_14/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_14/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_15/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run02_15/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_8/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_8/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_10/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_10/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_13/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_13/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_9/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run02_9/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_12/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/wtp_run01_12/bold_mcf_brain.nii.gz -F
+betfunc
+{'qa': "'fmriqa.py %s/bold_mcf.nii.gz %f'%(__import__('os').path.join(subdir_names['BOLD'],b),TR[b])", 'motcorr': "'mcflirt -in %s/bold.nii.gz %s'%(__import__('os').path.join(subdir_names['BOLD'],b),args['mcflirt_args'])", 'betfunc': "'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))", 'melodic': "'melodic -i %s/bold_mcf.nii.gz --Oall --report'%__import__('os').path.join(subdir_names['BOLD'],b)"}
+'bet %s/bold_mcf.nii.gz %s/bold_mcf_brain.nii.gz -F'%(__import__('os').path.join(subdir_names['BOLD'],b),__import__('os').path.join(subdir_names['BOLD'],b))
+bet /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_7/bold_mcf.nii.gz /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/BOLD/taste_run01_7/bold_mcf_brain.nii.gz -F
+subject dir %s already exists - overwriting
+subject dir %s already exists - overwriting
+None
+brainmask /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer/sugar_brain_sb_00122/mri/brainmask.mgz already exists - skipping autorecon1
+mri_convert --out_orientation LAS /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer/sugar_brain_sb_00122/mri/brainmask.mgz --reslice_like /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001.nii.gz  /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii
+gzip  /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii
+logs: ERROR: gzip: No such file or directory
+gzip: /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii.gz already exists;	not overwritten
+
+fslmaths /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii.gz -thr 1 -bin /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain_mask.nii.gz
+logs: ERROR: 
+
+
+WARNING!!!! Multiple image files detected:
+/corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii /corral-repl/utexas/poldracklab/data/sugar_brain/sb_00122/anatomy/highres001_brain.nii.gz 
+
+STOPPING PROGRAM
+
+field map does not exist, skippping process_fieldmap
+Launcher: Job 1 completed in 9899 seconds.
+Launcher: Task 0 done. Exiting.
+Launcher: Done. Job exited without errors

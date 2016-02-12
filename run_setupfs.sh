@@ -1,1 +1,1 @@
-python /work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py --keepdata --studyname sugar_brain -s sb_00137 --fs-subdir /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer --fsrecon -o 
+python /work/02885/gshearre/lonestar/setup_subject/setup_subjectgrace.py --getdata --keepdata --osirix_username davis --osirix_password eatthisnotthat --studyname sugar_brain -s sb_00122 --dcm2nii --motcorr --betfunc --fm --fs-subdir /corral-repl/utexas/poldracklab/data/sugar_brain/freesurfer --fsrecon -o
