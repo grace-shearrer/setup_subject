@@ -74,8 +74,8 @@ def parse_command_line():
         default=False,help='run freesurfer autorecon1')
     parser.add_argument('-v', dest='verbose',action='store_true',
         help='give verbose output')
-    parser.add_argument('--bet-inplane', dest='bet_inplane', action='store_true',
-        default=False,help='run bet on inplane')
+    parser.add_argument('--bet-highres', dest='bet_highres', action='store_true',
+        default=False,help='run bet on highres')
     parser.add_argument('--all', dest='doall', action='store_true',
         default=False,help='run all steps')
 
@@ -240,15 +240,15 @@ def copy_stripped_T1(args,subdir_names):
         if not args['testmode']:
             run_logged_cmd(cmd,outfile['main'])
 
-def bet_inplane(args,subdir_names):
+def bet_highres(args,subdir_names):
     if args['verbose']:
-        print 'running bet on inplane'
-    inplane_file=os.path.join(subdir_names['anatomy'],'inplane001.nii.gz')
-    if not os.path.exists(inplane_file):
-        print 'inplane file %s does not exist - skippping bet_inplane'%inplane_file
+        print 'running bet on highres'
+    highres_file=os.path.join(subdir_names['anatomy'],'highres001.nii.gz')
+    if not os.path.exists(highres_file):
+        print 'highres file %s does not exist - skippping bet_highres'%highres_file
         return
-    cmd='bet %s %s -f 0.3 -R'%(os.path.join(subdir_names['anatomy'],'inplane001.nii.gz'),
-                     os.path.join(subdir_names['anatomy'],'inplane001_brain.nii.gz'))
+    cmd='bet %s %s -f 0.3 -R'%(os.path.join(subdir_names['anatomy'],'highres001.nii.gz'),
+                     os.path.join(subdir_names['anatomy'],'highres001_brain.nii.gz'))
     print cmd
     if not args['testmode']:
         run_logged_cmd(cmd,outfile['main'])
@@ -576,7 +576,7 @@ if __name__ == "__main__":
 	args=parse_command_line()
 	
 	# parse doall
-	doall_cmds=['dcm2nii','motcorr','betfunc','qa','melodic','bet_inplane','fsrecon']
+	doall_cmds=['dcm2nii','motcorr','betfunc','qa','melodic','bet_highres','fsrecon']
 	if args['doall']:
 		for c in doall_cmds:
 			args[c]=True
@@ -616,8 +616,8 @@ if __name__ == "__main__":
 	##from here
 	execute_commands(args,subdir_names, TR)
 	## to here
-	if args['bet_inplane']:
-	    bet_inplane(args,subdir_names)
+	if args['bet_highres']:
+	    bet_highres(args,subdir_names)
 	
 	# run freesurfer autorecon1
         # added print here GES  
